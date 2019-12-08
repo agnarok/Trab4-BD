@@ -78,8 +78,7 @@ def parse(filename, total):
 # In[2]:
 
 
-def read_file():
-    file_path = "data/amazon-meta.txt"
+def read_file(file_path = "data/amazon-meta.txt"):
     line_num = sum(1 for line in open(file_path))
     result = []
     for e in parse(file_path, total=line_num):
@@ -247,19 +246,20 @@ def populate_database(user,password,host,port,dbname,data):
 # In[5]:
 
 
-# print("Insira os parâmetros da conexão: Usuário, senha, endereço do servidor, porta, nome da database")
-# print("Porta padrão é 5432")
-# user = input("Usuário")
-# password = input("Senha")
-# host = input("Endereço")
-# port = input("Porta")
-# dbname = input("Nome da database")
-user = "postgres"
-password = "postgres"
-host = "localhost"
-port = "5432"
-dbname = "teste"
-data = read_file()
+print("Insira os parâmetros da conexão: Usuário, senha, endereço do servidor, porta, nome da database")
+print("Porta padrão é 5432")
+user = input("Usuário:")
+password = input("Senha:")
+host = input("Endereço:")
+port = input("Porta:")
+dbname = input("Nome da database:")
+filePath = input("Insira o path para o arquivo de entrada (Ex: 'data/amazon-meta.txt'):")
+# user = "postgres"
+# password = "postgres"
+# host = "localhost"
+# port = "5432"
+# dbname = "teste"
+data = read_file(filePath)
 create_schema(user,password,host,port,dbname)
 populate_database(user,password,host,port,dbname,data)
 

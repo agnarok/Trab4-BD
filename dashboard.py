@@ -167,18 +167,18 @@ def create_connection(user, password, host, port, dbname):
 # In[10]:
 
 
-# print("Insira os parâmetros da conexão: Usuário, senha, endereço do servidor, porta, nome da database")
-# print("Porta padrão é 5432")
-# user = input("Usuário")
-# password = input("Senha")
-# host = input("Endereço")
-# port = input("Porta")
-# dbname = input("Nome da database")
-user = "postgres"
-password = "postgres"
-host = "localhost"
-port = "5432"
-dbname = "amazon"
+print("Insira os parâmetros da conexão: Usuário, senha, endereço do servidor, porta, nome da database")
+print("Porta padrão é 5432")
+user = input("Usuário")
+password = input("Senha")
+host = input("Endereço")
+port = input("Porta")
+dbname = input("Nome da database")
+# user = "postgres"
+# password = "postgres"
+# host = "localhost"
+# port = "5432"
+# dbname = "amazon"
 
 
 # ## Resultados:
